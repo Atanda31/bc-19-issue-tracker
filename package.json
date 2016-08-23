@@ -1,0 +1,26 @@
+{
+  "name": "issue-tracker",
+  "version": "1.0.0",
+  "description": "An Issue tracking application that enables users raise an issue while stating its priority",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Atanda31"
+  },
+  "keywords": [
+    "Issue",
+    "Track",
+    "Authentication",
+    "Priority"
+  ],
+  "author": "Atanda Olalekan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "firebase": "^3.3.0",
+    "materialize-css": "^0.97.7"
+  }
+}
