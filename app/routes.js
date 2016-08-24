@@ -3,10 +3,20 @@
 */
 
 module.exports = function(app) {
+
 	app.get('/', function(req, res){
-		res.sendFile("starter/index.html");
+		res.sendFile('starter/index.html');
 	});
+
+	app.get('/register', function(req,res) {
+		res.render('register.ejs');
+	});
+
 	app.get('/login', function(req,res) {
-		res.sendFile('starter/login.html');
+		res.render('login.ejs');
+	});
+
+	app.post('/home', function(req,res) {
+		res.render('home.ejs');
 	});
 }

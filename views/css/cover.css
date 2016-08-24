@@ -18,7 +18,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-image: url(images/bkg.jpg);
+  background-color: rgba(18, 134, 18, 0.5);
 }
 body {
   color: #fff;
