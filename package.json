@@ -19,8 +19,8 @@
   "author": "Atanda Olalekan",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.1",
     "express": "^4.14.0",
-    "firebase": "^3.3.0",
-    "materialize-css": "^0.97.7"
+    "firebase": "^3.3.0"
   }
 }
