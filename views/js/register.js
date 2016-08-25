@@ -24,7 +24,7 @@
             console.log(user);
             console.log(user.uid);
             alert("Your profile has been succesfully created & You are now Signed In");
-            window.location.href = "/home";
+            window.location.href = "/dashboard";
         }).catch((e)=>{
             console.log(err);
         });
