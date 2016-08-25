@@ -8,6 +8,7 @@ app.use(express.static('images'));
 app.use(express.static('css'));
 app.use(express.static('js'));
 app.use(express.static('views'));
+app.use(express.static('views/js'));
 
 app.set('view engine', 'ejs');
 
