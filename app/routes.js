@@ -16,6 +16,10 @@ module.exports = function(app) {
 		res.render('login.ejs');
 	});
 
+	app.get('/home', function(req,res) {
+		res.render('home.ejs');
+	});
+
 	app.post('/home', function(req,res) {
 		res.render('home.ejs');
 	});
