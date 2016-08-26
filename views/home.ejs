@@ -5,6 +5,9 @@
 
 		<!-- Website CSS style -->
 		<link rel="stylesheet" type="text/css" href="css/cover.css">
+		<link rel="stylesheet" type="text/css" href="css/label.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<!-- Website Font style -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -24,15 +27,86 @@
 							<nav>
 								<ul class="nav masthead-nav">
 									<li class=""><a href="/">Home</a></li>
-									<li class="active"><a href="#">Log Out</a></li>
+									<li class="active" id="logout"><a href="#">Log Out</a></li>
 								</ul>
 							</nav>
 						</div>
-
+						<div>
+						<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" style="float:left;">Click to Report Issue</button>
+					</div>
 					</div>
 				</div>
+				
+				<div class="modal fade" id="myModal" role="dialog">
+				    <div class="modal-dialog">
+				    
+				      <!-- Modal content-->
+				      <div class="modal-content">
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+				        <form class="form-labels-on-top" method="post" action="#">
+
+            <div class="form-title-row">
+                <h1>New Issue</h1>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Title</span>
+                    <input type="text" name="title" id="title">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Description</span>
+                    <input type="text" name="text" id="desc">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Department</span>
+                    <select name="dropdown" id="department">
+                        <option value="sales">Sales</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="recruitment">Recruitment</option>
+                        <option value="success">Success</option>
+                        <option value="training">Training</option>
+                        <option value="finance">Finance</option>
+                        <option value="operations">Operations</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Priority</span>
+                    <select name="dropdown" id="priority">
+                        <option value="high">High</option>
+                        <option value="low">Low</option>
+                    </select>
+                </label>
+            </div>
+
+            <div>
+                <button class="btn btn-danger btn-lg" type="submit" id ="submit">Report Issue</button>
+            </div>
+
+        </form>
+			<div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        </div>
+		        </div>
+				      
+				    </div>
+                </div>
+
 			</div>
 		</div>
+		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+		<script src="js/logout.js"></script>
+		<script src="js/userData.js"></script>
 
 	</body>
 </html>
