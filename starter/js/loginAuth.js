@@ -19,9 +19,11 @@
               password = document.getElementById('password').value
           e.preventDefault();
           auth.signInWithEmailAndPassword(email, password).then((user)=>{
+            const token = user.uid;
             firebase.auth().onAuthStateChanged(function(user) {
               if (user) {
-
+                localStorage.token = token;
+                console.log(user);
                 alert("You are now Signed In");
                 window.location.href = "/dashboard";
               } else {
