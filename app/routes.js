@@ -12,10 +12,6 @@ module.exports = function(app) {
 		res.render('register.ejs');
 	});
 
-	app.get('/login', function(req,res) {
-		res.render('login.ejs');
-	});
-
 	app.get('/dashboard', function(req,res) {
 		res.render('home.ejs');
 	});
