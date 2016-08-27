@@ -33,6 +33,6 @@
 				name: document.getElementById('name').value,
 				username: document.getElementById('username').value
 			});
-	        });
+	    });
 	  	 
 }())

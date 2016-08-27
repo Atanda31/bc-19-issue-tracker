@@ -16,6 +16,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 		<title>iReport | Issue Tracking Service</title>
+
 	</head>
 	<body>
 		<div class="site-wrapper">
@@ -26,8 +27,8 @@
 							<h3 class="masthead-brand">iReport</h3>
 							<nav>
 								<ul class="nav masthead-nav">
-									<li class=""><a href="/">Home</a></li>
-									<li class="active" id="logout"><a href="#">Log Out</a></li>
+									<li class=""id="login"><a href="/">Home</a></li>
+									<li class="active" id="logout"><a href="">Log Out</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -36,6 +37,29 @@
 					</div>
 					</div>
 				</div>
+
+				<div class="row col-md-6 col-md-offset-2 custyle">
+				    <table class="table table-striped custab">
+				    	<h2 style="float:left;">Reported Issues</h2>
+				    <thead>
+				        <tr>
+				            <th>Title</th>
+				            <th>Description</th>
+				            <th>Department</th>
+				            <th>Priority</th>
+				            <th class="text-center">Status</th>
+				        </tr>
+				    </thead>
+				            <tr>
+				                
+				                <td id="dataTitle"></td>
+				                <td id="dataDesc"></td>
+				                <td id="dataDept"></td>
+				                <td id="dataPriot"></td>
+				                <td id="dataStat"></td>
+				            </tr>
+				    </table>
+				    </div>
 				
 				<div class="modal fade" id="myModal" role="dialog">
 				    <div class="modal-dialog">
@@ -54,7 +78,7 @@
             <div class="form-row">
                 <label>
                     <span>Title</span>
-                    <input type="text" name="title" id="title">
+                    <input type="text" id="title">
                 </label>
             </div>
 
@@ -105,8 +129,8 @@
 			</div>
 		</div>
 		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-		<script src="js/logout.js"></script>
-		<script src="js/userData.js"></script>
-
+		<script src="js/auth.js"></script>
+		<script src="js/data.js"></script>
+		
 	</body>
 </html>
