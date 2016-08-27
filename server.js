@@ -1,12 +1,10 @@
 var express = require('express');
 var app = express();
  
-app.use(express.static('starter'));
-app.use(express.static('dist'));
-app.use(express.static('assets'));
-app.use(express.static('images'));
-app.use(express.static('css'));
-app.use(express.static('js'));
+app.use(express.static('views/dist'));
+app.use(express.static('views/assets'));
+app.use(express.static('views/images'));
+app.use(express.static('views/css'));
 app.use(express.static('views'));
 app.use(express.static('views/js'));
 
