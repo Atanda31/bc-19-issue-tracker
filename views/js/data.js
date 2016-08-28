@@ -80,45 +80,16 @@
 				var userData = app.child('issues/' +localStorage.token);
 
 			    userData.on('value', function(data){
-			        var title = []; 
-				    var desc = []; 
-				    var stat = [];
-				    var priority = []; 
-				    var dept = [];
-				    var details = [];
+			    	
 				    data.forEach(function(childData) {
-				        var newData = childData.val().title;
-				        var dataDesc = childData.val().description;
-				        var dataDept = childData.val().department;
-				        var dataPrio = childData.val().priority;
-				        var dataStat = childData.val().status;
-
-				        title.push(newData);
-				        desc.push(dataDesc);
-				        dept.push(dataDept);
-				        priority.push(dataPrio);
-				        stat.push(dataStat);
-				        details.push({
-				          	title:title,
-						    description:desc,
-						    department:dept,
-						    priority:priority,
-						    status:stat
-						});
-		            });
-				    for (let i = 0; i<details.length; i++) {
-				        var deptData = details[i].department,
-				        	titleData = details[i].title,
-				        	descData = details[i].description,
-				        	prioData = details[i].priority,
-				        	statData = details[i].status;
-				        document.getElementById('dataTitle').innerHTML += (titleData[i] +'</br >');
-				        document.getElementById('dataDesc').innerHTML += (descData[i] +'</br >');
-				        document.getElementById('dataDept').innerHTML += (deptData[i] +'</br >');
-				        document.getElementById('dataPriot').innerHTML += (prioData[i] +'<br/ >');
-				        document.getElementById('dataStat').innerHTML += (statData[i] +'</br >');
-				        console.log(titleData[i]);
-				    }
+				        document.getElementById('dataTitle').innerHTML += (childData.val().title +'</br >');
+				        document.getElementById('dataDesc').innerHTML += (childData.val().description +'</br >');
+				        document.getElementById('dataDept').innerHTML += (childData.val().department +'</br >');
+				        document.getElementById('dataPriot').innerHTML += (childData.val().priority +'<br/ >');
+				        document.getElementById('dataStat').innerHTML += (childData.val().status +'</br >');
+				        console.log(childData.val().title);
+				    });
+				    
 		        });
 		    }
 		    else{
