@@ -9,7 +9,7 @@
 	  	dept = deptSelect.options[deptSelect.selectedIndex].value,
 	  	priority = prioritySelect.options[prioritySelect.selectedIndex].value;
 	var submit = document.getElementById('submit');
-
+	
 	/**
 	*Event Listener that executes as soon as the page loads
 	*It calls the Database class method getData() to fetch issues
@@ -19,7 +19,7 @@
 		var dataCapt = new Database(token);
 		dataCapt.getData();
 	});
-
+    
 	/**
 	*Event Listener that gets fired when user reports issue
 	*It calls the Database class method postData()

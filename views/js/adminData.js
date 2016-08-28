@@ -32,12 +32,13 @@
 					snapshot.forEach(function(childSnapshot) {
 						var user = firebase.auth().currentUser;
 						if (childSnapshot.val().department === user.photoURL){
-							console.log(childSnapshot.val());
-							document.getElementById('title').innerHTML = (childSnapshot.val().title + '</br >');
-							document.getElementById('desc').innerHTML = (childSnapshot.val().description + '</br >');
-							document.getElementById('dept').innerHTML = (childSnapshot.val().department + '</br >');
-							document.getElementById('prio').innerHTML = (childSnapshot.val().priority + '</br >');
-							document.getElementById('stat').innerHTML = (childSnapshot.val().status + '</br >');
+							var dataShot = childSnapshot.val();
+							console.log(dataShot);
+							document.getElementById('title').innerHTML += (childSnapshot.val().title + '</br >');
+							document.getElementById('desc').innerHTML += (childSnapshot.val().description + '</br >');
+							document.getElementById('dept').innerHTML += (childSnapshot.val().department + '</br >');
+							document.getElementById('prio').innerHTML += (childSnapshot.val().priority + '</br >');
+							document.getElementById('stat').innerHTML += (childSnapshot.val().status + '</br >');
 						}
 					});
 				});
