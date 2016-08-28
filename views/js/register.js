@@ -23,8 +23,8 @@
         	auth.createUserWithEmailAndPassword(email, password).then((user)=>{
             console.log(user);
             console.log(user.uid);
-            alert("Your profile has been succesfully created & You are now Signed In");
-            window.location.href = "/dashboard";
+            alert("Your profile has been succesfully created");
+            window.location.href = "/";
         }).catch((e)=>{
             console.log(err);
         });
