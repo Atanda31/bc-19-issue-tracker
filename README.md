@@ -9,10 +9,12 @@ iReport is an issue tracking application for Department Admins and user alike. I
 
 ### As Admin User
 
+* Sign In as Admin
 * View Issues specific to department
 * Assign Issue
 * View all Issues (open/closed)
 * Close Issues if resolved
+* Add Comments (if any)
 
 ## Credits
 
