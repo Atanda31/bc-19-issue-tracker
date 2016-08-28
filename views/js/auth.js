@@ -13,6 +13,10 @@
   var logout = document.getElementById('logout');
   var auth = firebase.auth();
 
+  /**
+  *Event Listener for logging in
+  *It calls the Authenticate class method logIn()
+  */
   login.addEventListener('click', e => {
     e.preventDefault();
     var email = document.getElementById('email').value,
@@ -22,15 +26,26 @@
        
     });
 
+  /**
+  *Event Listener that logs user out
+  *It calls the Authenticate class method logOut()
+  */
   logout.addEventListener('click', e => {
     e.preventDefault();
     var signOut = new Authenticate();
     signOut.logOut();
   });
   
-
+/**
+*Authenticate class that verifies credentials provided by user and throws an error if wrong credentials
+*Handles signout too
+*/
   class Authenticate {
 
+    /**
+    *Method that verifies user credentials and logs them in or throws error
+    *@param email, password
+    */
     logIn(email,password) {
       auth.signInWithEmailAndPassword(email, password).then((user)=>{
         const token = user.uid;
@@ -40,7 +55,8 @@
             console.log(user);
             alert("You are now Signed In");
             window.location.href = "/dashboard";
-          } else {
+          }
+          else {
               window.location.href = "#";
             }
         });
@@ -49,6 +65,10 @@
           console.log(e);
         });
     }
+
+    /**
+    *Method that signs user out and return them to home page
+    */
 
     logOut(){
 

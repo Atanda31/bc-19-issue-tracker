@@ -1,4 +1,7 @@
 (function() {
+	/**
+	*Variables Instantiation
+	*/
 	var app = firebase.database().ref();
 	var token = localStorage.token;
 	var deptSelect = document.getElementById('department'),
@@ -7,12 +10,20 @@
 	  	priority = prioritySelect.options[prioritySelect.selectedIndex].value;
 	var submit = document.getElementById('submit');
 
+	/**
+	*Event Listener that executes as soon as the page loads
+	*It calls the Database class method getData() to fetch issues
+	*/
 	window.addEventListener('load', e =>{
 		e.preventDefault();
 		var dataCapt = new Database(token);
 		dataCapt.getData();
 	});
 
+	/**
+	*Event Listener that gets fired when user reports issue
+	*It calls the Database class method postData()
+	*/
 	submit.addEventListener('click', e => {
 		e.preventDefault();
 		var dataPost = new Database(token);
@@ -20,11 +31,24 @@
 	});
 
 
-
+/**
+* Class that handles retrieving and postind of user daata
+*/
 	class Database {
+
+		/**
+		*Constructor that takes in token as argument so that user is always logged in before been able to access the class methods
+		*@param token
+		*/
+
 		constructor(token){
 			this.token= token;
 		}
+
+		/**
+		*Method that handle data post by user
+		*It takes no argument but strongly relies on token for it's operation
+		*/
 
 		postData() {
 
@@ -38,18 +62,24 @@
         			priority:prioritySelect.options[prioritySelect.selectedIndex].value,
         			status:'open'
         		});
+        		location.reload();
         	}
         	else{
         		alert('You are currently not logged in!!');
         	}
 		}
 
+		/**
+		*Method for fetchind data from database
+		*Relies on token for its operation too
+		*/
+
 		getData() {
 
 			if (this.token !== undefined){
 				var userData = app.child('issues/' +localStorage.token);
 
-			    userData.once('value', function(data){
+			    userData.on('value', function(data){
 			        var title = []; 
 				    var desc = []; 
 				    var stat = [];
@@ -62,6 +92,7 @@
 				        var dataDept = childData.val().department;
 				        var dataPrio = childData.val().priority;
 				        var dataStat = childData.val().status;
+
 				        title.push(newData);
 				        desc.push(dataDesc);
 				        dept.push(dataDept);
@@ -91,7 +122,7 @@
 		        });
 		    }
 		    else{
-				alert('You are not currently logged in');
+				alert('You are currently not logged in');
 				window.location.href = '/';
 			}
 		}
