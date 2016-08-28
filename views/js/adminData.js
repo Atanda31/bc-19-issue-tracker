@@ -16,7 +16,7 @@
 */
 	class AdminData {
 /**
-*Construct that accespt token as parameter
+*Construct that accepts token as parameter
 *@param token
 */
 		constructor(token){
@@ -45,4 +45,3 @@
 		}
 	}
 }())
-//.orderByChild('status').equalTo('open').2c53aKWAk5QIwIJgRYxBFslJQ943
