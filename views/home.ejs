@@ -39,7 +39,7 @@
 				</div>
 
 				<div class="row col-md-6 col-md-offset-2 custyle">
-				    <table class="table table-striped custab">
+				    <table class="table table-striped custab" id="issues-table">
 				    	<h2 style="float:left;">Reported Issues</h2>
 				    <thead>
 				        <tr>
@@ -71,53 +71,54 @@
 				        </div>
 				        <form class="form-labels-on-top" method="post" action="#">
 
-            <div class="form-title-row">
-                <h1>New Issue</h1>
-            </div>
+		            <div class="form-title-row">
+		                <h1>New Issue</h1>
+		            </div>
 
-            <div class="form-row">
-                <label>
-                    <span>Title</span>
-                    <input type="text" id="title">
-                </label>
-            </div>
+		            <div class="form-row">
+		                <label>
+		                    <span>Title</span>
+		                    <input type="text" id="title">
+		                </label>
+		            </div>
 
-            <div class="form-row">
-                <label>
-                    <span>Description</span>
-                    <input type="text" name="text" id="desc">
-                </label>
-            </div>
+		            <div class="form-row">
+		                <label>
+		                    <span>Description</span>
+		                    <input type="text" name="text" id="desc">
+		                </label>
+		            </div>
 
-            <div class="form-row">
-                <label>
-                    <span>Department</span>
-                    <select name="dropdown" id="department">
-                        <option value="sales">Sales</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="recruitment">Recruitment</option>
-                        <option value="success">Success</option>
-                        <option value="training">Training</option>
-                        <option value="finance">Finance</option>
-                        <option value="operations">Operations</option>
-                    </select>
-                </label>
-            </div>
-            <div class="form-row">
-                <label>
-                    <span>Priority</span>
-                    <select name="dropdown" id="priority">
-                        <option value="high">High</option>
-                        <option value="low">Low</option>
-                    </select>
-                </label>
-            </div>
+		            <div class="form-row">
+		                <label>
+		                    <span>Department</span>
+		                    <select name="dropdown" id="department">
+		                        <option value="sales">Sales</option>
+		                        <option value="marketing">Marketing</option>
+		                        <option value="recruitment">Recruitment</option>
+		                        <option value="success">Success</option>
+		                        <option value="training">Training</option>
+		                        <option value="finance">Finance</option>
+		                        <option value="operations">Operations</option>
+		                    </select>
+		                </label>
+		            </div>
+		            <div class="form-row">
+		                <label>
+		                    <span>Priority</span>
+		                    <select name="dropdown" id="priority">
+		                        <option value="high">High</option>
+		                        <option value="Medium">Medium</option>
+		                        <option value="low">Low</option>
+		                    </select>
+		                </label>
+		            </div>
 
-            <div>
-                <button class="btn btn-danger btn-lg" type="submit" id ="submit">Report Issue</button>
-            </div>
+		            <div>
+		                <button class="btn btn-danger btn-lg" type="submit" id ="submit">Report Issue</button>
+		            </div>
 
-        </form>
+		        </form>
 			<div class="modal-footer">
 				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				        </div>
