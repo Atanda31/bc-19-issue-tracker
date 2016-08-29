@@ -7,6 +7,7 @@ iReport is an issue tracking application for Department Admins and user alike. I
 * Sign In as User
 * Raise and Issue by providing (title, description, department, priority, status)
 * View Issue status
+* Social Auth (Google, Facebook)
 
 ### As Admin User
 
